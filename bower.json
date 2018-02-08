@@ -1,0 +1,30 @@
+{
+  "name": "one-pager",
+  "version": "0.0.0",
+  "authors": [
+    "Maksim Tereshchenko <enot.work@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "fontawesome": "~4.7.0",
+    "Chart.js": "~1.0.2",
+    "metisMenu": "~1.1.3",
+    "ng-file-upload": "^12.2.13",
+    "moment": "~2.18",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "textAngular": "~1.5",
+    "jquery-mask-plugin": "~1.14",
+    "angular-password": "~1.0.3",
+    "bootstrap-4": "bootstrap#v4-dev",
+    "bootstrap-3": "bootstrap#3.3.7",
+    "popper.js": "^1.12.9",
+    "slick-carousel": "^1.8.1"
+  }
+}

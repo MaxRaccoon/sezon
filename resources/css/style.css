@@ -1,0 +1,557 @@
+:root {
+  background-color: #fff;
+  font-family: Montserrat, "Times New Roman", Times, serif !important;
+  font-size: 14px;
+  color: #47201A;
+}
+.hide {
+  display: none;
+}
+.btn-self {
+  background-color: #47201A;
+  color: #fff;
+}
+.btn-self:hover,
+.btn-self:link {
+  color: #fff;
+}
+.orange {
+  color: #FF492F;
+}
+div.slider {
+  margin-bottom: 50px;
+}
+h1.center {
+  text-align: center;
+}
+h2.title,
+h3.title {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-family: "Montserrat SemiBold";
+}
+.upper {
+  text-transform: uppercase;
+}
+.title-bg {
+  background-color: #FF492F;
+  margin: 0;
+  padding: 20px 0;
+  margin-top: -50px;
+}
+.title-bg h1 {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.carousel-caption.d-none.d-md-block {
+  background-color: rgba(71, 32, 26, 0.5);
+}
+.carousel-caption.d-none.d-md-block h3 {
+  font-size: 3em;
+  font-weight: bold;
+}
+.carousel-caption.d-none.d-md-block p {
+  font-size: 2em;
+}
+.clearfix {
+  clear: both;
+}
+.padded {
+  padding: 50px 0;
+}
+.gray {
+  color: #454547;
+}
+.graybg {
+  background-color: #F4F4F4;
+}
+.nomarrgin {
+  margin: 0;
+}
+.advantages {
+  padding: 30px 0 30px 0;
+  height: 570px;
+}
+.advantages > div {
+  width: 25%;
+  float: left;
+  height: 470px;
+  padding: 70px 20px 20px 20px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.advantages > div h3 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 50px;
+}
+.advantages > div p {
+  height: 250px;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: bold;
+}
+.advantages .advantages-map {
+  background-color: rgba(0, 180, 179, 0.5);
+}
+.advantages .advantages-map ::after {
+  content: "";
+  background: url(/images/map_bg.png);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.advantages .advantages-equipment ::after {
+  content: "";
+  background: url(/images/equipment_bg.jpg);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.advantages .advantages-program ::after {
+  content: "";
+  background: url(/images/program_bg.jpg);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.advantages .advantages-payment {
+  background-color: rgba(71, 32, 26, 0.6);
+}
+.advantages .advantages-payment ::after {
+  content: "";
+  background: url(/images/payment_bg.png);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.gallery-block {
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+}
+.gallery-block .slick-gallery .slick-slide {
+  height: 300px;
+  width: auto;
+  margin: 25px 25px 0 0;
+}
+.gallery-block .slick-gallery .slick-slide img {
+  height: 300px;
+  width: auto;
+  border: 2px solid #47201A;
+}
+.gallery-block .slick-gallery .slick-slide.slick-current {
+  height: 350px;
+  margin-top: 0;
+}
+.gallery-block .slick-gallery .slick-slide.slick-current img {
+  height: 350px;
+  width: auto;
+}
+.gallery-block .slick-gallery .slick-next {
+  right: 100px;
+  z-index: 50;
+  font-size: 3em;
+}
+.gallery-block .slick-gallery .slick-prev {
+  left: 100px;
+  z-index: 50;
+}
+.info-block {
+  background: url(/images/info_bg.jpg) no-repeat;
+  background-size: 100%;
+  background-color: #1c0d0a;
+  width: 100%;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.info-block h2 {
+  font-size: 3em;
+}
+.info-block p {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 80%;
+  font-family: Montserrat SemiBold, "Times New Roman", Times, serif !important;
+}
+.info-block p.full {
+  padding-top: 0;
+  display: none;
+}
+#yMap {
+  width: 100%;
+  height: 400px;
+}
+.trainers {
+  padding: 50px 0;
+}
+.trainers > div {
+  width: 20%;
+  float: left;
+  text-align: center;
+  height: 300px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.trainers > div .img {
+  height: 250px;
+  overflow: hidden;
+}
+.trainers > div .img img {
+  width: 100%;
+}
+.trainers > div .name {
+  width: 100%;
+  border: 1px solid #47201A;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+.trainers > div .info {
+  border-top: 2px solid darkred;
+  background-color: #47201A;
+  color: #fff;
+  padding: 15px;
+}
+.schedule-block {
+  background-color: #47201A;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+.schedule-block .dynamic-schedule-program {
+  border-top: 2px solid darkred;
+  margin-top: 30px;
+}
+.schedule-block .dynamic-schedule-program .program-list {
+  float: left;
+  width: 15%;
+}
+.schedule-block .dynamic-schedule-program .program-list > div {
+  padding: 10px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px solid darkred;
+}
+.schedule-block .dynamic-schedule-program .program-list > div.active {
+  background-color: #fff;
+  color: #47201A;
+}
+.schedule-block .dynamic-schedule-program .info-block {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  color: #47201A;
+  position: relative;
+  background: url(/images/fitness.png) #fff no-repeat bottom right;
+  background-size: 50%;
+}
+.schedule-block .dynamic-schedule-program .info-block > div {
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.schedule-block .dynamic-schedule-program .info-block .schedule-link {
+  font-size: 1.2em;
+}
+.schedule-block .dynamic-schedule-program .info-block .program-time {
+  font-size: 1.3em;
+  width: 50%;
+  float: left;
+  font-weight: bold;
+  padding-top: 10px;
+  bottom: 30px;
+  position: absolute;
+}
+.schedule-block .dynamic-schedule-program .info-block .program-trainer {
+  width: 50%;
+  margin-left: 50%;
+  text-align: right;
+  bottom: 30px;
+  position: absolute;
+  right: 30px;
+}
+.schedule-block .dynamic-schedule-program .info-block .program-trainer .trainer {
+  height: 50px;
+  font-weight: bold;
+  border: 1px solid #47201A;
+  border-radius: 25px;
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 1.3em;
+  background-color: #fff;
+}
+.schedule-block .dynamic-schedule-program .info-block .program-trainer .trainer img {
+  height: 100%;
+  width: auto;
+}
+.schedule-block .dynamic-schedule-program .schedule-list {
+  float: left;
+  width: 15%;
+  text-align: right;
+}
+.schedule-block .dynamic-schedule-program .schedule-list > div {
+  padding: 10px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px solid darkred;
+}
+.prices > div:nth-child(1) {
+  font-size: 1em;
+}
+.prices > div:nth-child(1) h4 {
+  font-size: 1.3em;
+}
+.prices > div:nth-child(2) {
+  font-size: 1.1em;
+}
+.prices > div:nth-child(2) h4 {
+  font-size: 1.4em;
+}
+.prices > div:nth-child(3) {
+  font-size: 1.2em;
+}
+.prices > div:nth-child(3) h4 {
+  font-size: 1.6em;
+}
+.prices > div:nth-child(4) {
+  font-size: 1.3em;
+}
+.prices > div:nth-child(4) h4 {
+  font-size: 1.8em;
+}
+.prices .item {
+  padding: 20px 0;
+}
+.prices .item .time {
+  text-align: center;
+  font-size: 1em;
+  color: #000;
+}
+.prices .item .value {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.prices .item .value i {
+  font-size: 0.9em;
+}
+.programs {
+  width: 100%;
+}
+.programs.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.programs.row .image {
+  height: 480px;
+  overflow: hidden;
+  padding: 0;
+}
+.programs.row .image img {
+  width: 100%;
+}
+.programs.row .description {
+  height: 480px;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.2em;
+}
+.programs.row .description h3 {
+  color: #47201A;
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-top: 80px;
+}
+.programs.row .description .short {
+  font-size: 1em;
+  font-family: "Roboto Italic", "Roboto", Helvetica, Arial, sans-serif;
+  color: #000;
+}
+.programs.row .description .info {
+  color: #8b8b8b;
+  margin-top: 30px;
+  font-size: 1.2em;
+  padding-bottom: 90px;
+}
+.btn-gray {
+  border-radius: 0;
+  border: 2px solid #47201A;
+  background-color: #fff;
+  color: #47201A !important;
+  cursor: pointer;
+}
+.btn-white {
+  border-radius: 0;
+  border: 2px solid #fff;
+  color: #fff !important;
+  cursor: pointer;
+}
+.programs-list.row {
+  padding: 0;
+  margin: 0;
+}
+.programs-list .menu-list {
+  background-color: #FF492F;
+  padding: 0;
+}
+.programs-list .menu-list > div {
+  color: #fff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-family: "Montserrat SemiBold";
+  cursor: pointer;
+}
+.programs-list .menu-list > div.active {
+  border-left: 10px solid #fff;
+  cursor: default;
+}
+.programs-list .program-info {
+  padding: 70px 120px;
+  font-size: 1.2em;
+}
+.programs-list .program-info h4 {
+  color: #8b8b8b;
+  font-size: 1.2em;
+}
+.programs-list .program-info h3 {
+  padding-bottom: 50px;
+}
+.programs-list .program-info .photo {
+  position: absolute;
+  right: 0;
+  margin-right: -200px;
+  margin-top: -60px;
+}
+.programs-list .program-info .info {
+  padding-top: 30px;
+}
+.programs-list .program-info .info .trainer {
+  border: 1px solid #47201A;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-family: "Montserrat SemiBold";
+  display: inline-block;
+}
+.programs-list .program-info .info .day,
+.programs-list .program-info .info .program {
+  border: 1px solid #FF492F;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-family: "Montserrat SemiBold";
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.pricing {
+  width: 100%;
+  height: 350px;
+  background: url(/images/bg-2.png) no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  padding: 60px 0;
+}
+.pricing .info {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 30px 0;
+}
+.pricing .info .phone {
+  font-size: 2em;
+  color: #FF492F;
+}
+.pricing .row > div {
+  padding: 0 10px;
+}
+.pricing .price-info {
+  background-color: #fff;
+  color: #000000;
+  text-align: center;
+  padding-top: 30px;
+}
+.pricing .price-info .name {
+  font-family: "Montserrat SemiBold";
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+.pricing .price-info .time {
+  color: #454547;
+}
+.pricing .price-info .price {
+  font-family: "Montserrat SemiBold";
+  font-size: 2em;
+  padding-bottom: 15px;
+}
+.pricing .price-info .go {
+  background-color: #FF492F;
+  font-family: "Montserrat SemiBold";
+  padding: 20px 0;
+}
+ul.blocked {
+  padding: 0;
+  margin: 0;
+  list-style-position: outside;
+}
+ul.blocked li {
+  width: 50%;
+  float: left;
+  list-style: none;
+  color: #454547;
+  padding: 20px 0;
+}
+ul.blocked li .number {
+  font-size: 2em;
+  color: #8b8b8b;
+}
+.footer .info {
+  padding-top: 30px;
+}
+.footer .info .company-name {
+  font-size: 1.2em;
+}
+.schedule-table .info {
+  padding-top: 0 !important;
+  font-size: 0.8em !important;
+}
+.schedule-table .info .day {
+  border: 1px solid #47201A !important;
+  color: #FF492F !important;
+}
+
+/*# sourceMappingURL=style.css.map */
