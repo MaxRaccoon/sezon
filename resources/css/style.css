@@ -16,7 +16,7 @@
   color: #fff;
 }
 .orange {
-  color: #FF492F;
+  color: #FED944;
 }
 div.slider {
   margin-bottom: 50px;
@@ -34,13 +34,13 @@ h3.title {
   text-transform: uppercase;
 }
 .title-bg {
-  background-color: #FF492F;
+  background-color: #FED944;
   margin: 0;
   padding: 20px 0;
   margin-top: -50px;
 }
 .title-bg h1 {
-  color: #fff;
+  color: #47201A;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -228,6 +228,8 @@ h3.title {
 .trainers > div .name {
   width: 100%;
   border: 1px solid #47201A;
+  background-color: #47201A;
+  color: #fff;
   text-transform: uppercase;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -308,7 +310,8 @@ h3.title {
   display: inline-block;
   padding-left: 20px;
   font-size: 1.3em;
-  background-color: #fff;
+  background-color: #47201A;
+  color: #fff;
 }
 .schedule-block .dynamic-schedule-program .info-block .program-trainer .trainer img {
   height: 100%;
@@ -425,11 +428,11 @@ h3.title {
   margin: 0;
 }
 .programs-list .menu-list {
-  background-color: #FF492F;
+  background-color: #FED944;
   padding: 0;
 }
 .programs-list .menu-list > div {
-  color: #fff;
+  color: #47201A;
   font-size: 1.5em;
   text-transform: uppercase;
   padding: 15px 30px;
@@ -437,7 +440,7 @@ h3.title {
   cursor: pointer;
 }
 .programs-list .menu-list > div.active {
-  border-left: 10px solid #fff;
+  border-left: 10px solid #47201A;
   cursor: default;
 }
 .programs-list .program-info {
@@ -462,6 +465,8 @@ h3.title {
 }
 .programs-list .program-info .info .trainer {
   border: 1px solid #47201A;
+  background-color: #47201A;
+  color: #fff;
   cursor: pointer;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -470,7 +475,7 @@ h3.title {
 }
 .programs-list .program-info .info .day,
 .programs-list .program-info .info .program {
-  border: 1px solid #FF492F;
+  border: 1px solid #FED944;
   cursor: pointer;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -494,7 +499,7 @@ h3.title {
 }
 .pricing .info .phone {
   font-size: 2em;
-  color: #FF492F;
+  color: #FED944;
 }
 .pricing .row > div {
   padding: 0 10px;
@@ -519,7 +524,7 @@ h3.title {
   padding-bottom: 15px;
 }
 .pricing .price-info .go {
-  background-color: #FF492F;
+  background-color: #FED944;
   font-family: "Montserrat SemiBold";
   padding: 20px 0;
 }
@@ -551,7 +556,7 @@ ul.blocked li .number {
 }
 .schedule-table .info .day {
   border: 1px solid #47201A !important;
-  color: #FF492F !important;
+  color: #FED944 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
