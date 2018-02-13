@@ -25,6 +25,7 @@
     "bootstrap-4": "bootstrap#v4-dev",
     "bootstrap-3": "bootstrap#3.3.7",
     "popper.js": "^1.12.9",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "unitegallery": "1.7.28"
   }
 }
