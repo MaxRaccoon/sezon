@@ -103,7 +103,7 @@
                 <a href="#">
                     <img alt="Lemon Slice"
                          src="{{ $image }}"
-                         data-image=""{{ $image }}"
+                         data-image="{{ $image }}"
                          data-description="This is a Lemon Slice"
                          style="display:none">
                 </a>
