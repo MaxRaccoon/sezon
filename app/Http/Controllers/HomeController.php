@@ -96,7 +96,7 @@ class HomeController extends Controller
 
         $images = [];
         foreach (Gallery::orderBy('id','asc')->get() AS $item) {
-            $images[] = $item['image_link'];
+            $images[] = $item;
         }
 
         $days = ProgramSchedule::$days;
