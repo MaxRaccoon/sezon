@@ -102,7 +102,7 @@
 
             @foreach ($images as $image)
                 <a href="#">
-                    <img alt="{{ $image['title'] }}
+                    <img alt="{{ $image['title'] }}"
                          src="{{ $image['image_thumb_link'] }}"
                          data-image="{{ $image['image_link'] }}"
                          data-description="{{ $image['description'] }}"
