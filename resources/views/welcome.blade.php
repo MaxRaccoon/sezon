@@ -174,7 +174,7 @@
                     @foreach($program['photo'] as $photo)
                         <a href="#">
                             <img alt="Фото №{{ $photo['id'] }}"
-                                 src="{{ $photo['photo_link'] }}"
+                                 src="{{ $photo['photo_thumb_link'] }}"
                                  data-image="{{ $photo['photo_link'] }}"
                                  style="display:none">
                         </a>

@@ -39,7 +39,19 @@ class UploadController extends Controller
                 break;
             case 'technology' : $image->resize(100, 100);
                 break;
-            default : $image->resize(100, 100);
+            default : {
+                $newWidth = 200;
+                if ($image->height() > $image->width()) {
+                    $aspect = $image->width() / $image->height();
+                    $newHeight = (int)($newWidth / $aspect);
+                } else if ($image->height() < $image->width()) {
+                    $aspect = $image->height() / $image->width();
+                    $newHeight = (int)($newWidth * $aspect);
+                } else {
+                    $newHeight = 200;
+                }
+                $image->resize($newWidth, $newHeight);
+            }
                 break;
         }
         $image->save($storageDir . 'thumb_' . $file->getClientOriginalName());
