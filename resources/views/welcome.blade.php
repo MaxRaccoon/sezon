@@ -64,6 +64,7 @@
                         </div>
                     </div>
                     @endforeach
+                </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Следующий</span>
@@ -169,6 +170,23 @@
         <div class="program-info col-md-7">
             @foreach($programs as $program)
             <div data-program-index="{{ $program['id'] }}">
+                <div class="photo" id="program-photo-{{ $program['id'] }}">
+                    @foreach($program['photo'] as $photo)
+                        <a href="#">
+                            <img alt="Фото №{{ $photo['id'] }}"
+                                 src="{{ $photo['photo_link'] }}"
+                                 data-image="{{ $photo['photo_link'] }}"
+                                 style="display:none">
+                        </a>
+                    @endforeach
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $("#program-photo-{{ $program['id'] }}").unitegallery({
+                            tiles_type:"justified"
+                        });
+                    });
+                </script>
                 <h4>Продолжительность {{ $program['duration'] }} минут</h4>
                 <h3 class="title">{{ $program['title'] }}</h3>
                 {!! $program['description'] !!}

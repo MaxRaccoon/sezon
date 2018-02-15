@@ -16,4 +16,10 @@
                ng-required="true" ng-value="programPhoto.photo_thumb_link" />
     </div>
 
+    <div class="progress" id="uploadProgress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            0%
+        </div>
+    </div>
+
 </form>

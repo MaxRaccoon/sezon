@@ -84,6 +84,13 @@ class HomeController extends Controller
                 ->orderBy('day_of_weak', 'asc')
                 ->orderBy('start_time', 'asc')->get();
             $programArray[$item['id']] = $item;
+            $programArray[$item['id']]['photo'] = [];
+        }
+        unset($collection);
+
+        $collection = ProgramPhoto::orderBy('id', 'asc')->get();
+        foreach ($collection->toArray() AS $item) {
+            $programArray[$item['program_id']]['photo'][] = $item;
         }
         unset($collection);
 

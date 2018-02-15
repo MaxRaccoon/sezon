@@ -37,7 +37,6 @@ elixir(function(mix) {
         'resources/css/style.css',
     ], 'public/assets/stylesheets/styles.css', './');
     mix.scripts([
-        'bower_components/jquery/dist/jquery.min.js',
         'bower_components/bootstrap-4/dist/js/bootstrap.min.js',
         'bower_components/moment/min/moment-with-locales.min.js',
         'bower_components/moment/locale/ru.js',
@@ -49,7 +48,8 @@ elixir(function(mix) {
         'resources/js/frontend.js'
     ], 'public/assets/scripts/frontend.js', './')
     mix.scripts([
-        'bower_components/popper.js/dist/umd/popper.js'
+        'bower_components/popper.js/dist/umd/popper.js',
+        'bower_components/jquery/dist/jquery.min.js'
     ], 'public/assets/scripts/topLoadedScripts.js', './'),
     mix.scripts([
         'bower_components/jquery/dist/jquery.min.js',

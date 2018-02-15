@@ -458,7 +458,9 @@ h3.title {
   position: absolute;
   right: 0;
   margin-right: -200px;
-  margin-top: -60px;
+}
+.programs-list .program-info .photo img {
+  width: 150px;
 }
 .programs-list .program-info .info {
   padding-top: 30px;

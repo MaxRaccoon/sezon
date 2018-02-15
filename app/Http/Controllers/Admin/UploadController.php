@@ -25,7 +25,7 @@ class UploadController extends Controller
     public function index(Request $request)
     {
         $file = $request->file('file');
-        if (!in_array($file->getClientOriginalExtension(), $this->allowExtensions)) {
+        if (!in_array(strtolower($file->getClientOriginalExtension()), $this->allowExtensions)) {
             return response()->json(['success'=>false]);
         }
 

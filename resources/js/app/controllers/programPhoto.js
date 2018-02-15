@@ -24,6 +24,10 @@ app.controller('programPhotoController', ['$scope', 'dev4UService', '$http', 'AP
                 console.log('Error status: ' + resp.status);
             }, function (evt) {
                 var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                $("#uploadProgress .progress-bar")
+                    .attr("aria-valuenow", progressPercentage)
+                    .css("width", progressPercentage + "%")
+                    .text(progressPercentage + "%");
                 console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
             });
         };
