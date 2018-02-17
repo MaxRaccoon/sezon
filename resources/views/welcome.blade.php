@@ -182,10 +182,7 @@
                 </div>
                 <script>
                     $(document).ready(function () {
-                        $("#program-photo-{{ $program['id'] }}").unitegallery({
-                            tiles_type: "justified",
-                            tiles_justified_space_between: 0
-                        });
+                        $("#program-photo-{{ $program['id'] }}").unitegallery();
                     });
                 </script>
                 @if ($program['duration'] and $program['duration'] != "")
