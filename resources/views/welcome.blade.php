@@ -183,11 +183,14 @@
                 <script>
                     $(document).ready(function () {
                         $("#program-photo-{{ $program['id'] }}").unitegallery({
-                            tiles_type:"justified"
+                            tiles_type: "justified",
+                            tiles_justified_space_between: 0
                         });
                     });
                 </script>
+                @if ($program['duration'] and $program['duration'] != "")
                 <h4>Продолжительность {{ $program['duration'] }} минут</h4>
+                @endif
                 <h3 class="title">{{ $program['title'] }}</h3>
                 {!! $program['description'] !!}
                 <div class="clearfix"></div>
