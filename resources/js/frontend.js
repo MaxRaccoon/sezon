@@ -89,6 +89,14 @@ function selectProgram(index) {
 
     $("#programs .program-info > div").not("[data-program-index='" + index + "']").hide();
     $("#programs .program-info > div[data-program-index='" + index + "']").show();
+    if ($("#programs .program-info > div[data-program-index='" + index + "'] .photo")
+            .data("gallery-init") == 0) {
+        $("#program-photo-" + index).unitegallery({
+            tiles_type:"justified"
+        });
+        $("#programs .program-info > div[data-program-index='" + index + "'] .photo")
+            .data("gallery-init", 1);
+    }
 }
 /**
  * Информация о тренере

@@ -170,7 +170,8 @@
         <div class="program-info col-md-7">
             @foreach($programs as $program)
             <div data-program-index="{{ $program['id'] }}">
-                <div class="photo" id="program-photo-{{ $program['id'] }}">
+                <div class="photo" id="program-photo-{{ $program['id'] }}"
+                    data-gallery-init="0">
                     @foreach($program['photo'] as $photo)
                         <a href="#">
                             <img alt="Фото №{{ $photo['id'] }}"
@@ -180,11 +181,6 @@
                         </a>
                     @endforeach
                 </div>
-                <script>
-                    $(document).ready(function () {
-                        $("#program-photo-{{ $program['id'] }}").unitegallery();
-                    });
-                </script>
                 @if ($program['duration'] and $program['duration'] != "")
                 <h4>Продолжительность {{ $program['duration'] }} минут</h4>
                 @endif
