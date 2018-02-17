@@ -54,7 +54,7 @@ class HomeController extends Controller
         $topLinkArray = [];
         foreach ($collection->toArray() AS $item) {
             $parts = explode(" ", $item['title']);
-            $item['title_first_part'] = array_pop($parts);
+            $item['title_first_part'] = array_shift($parts);
             $item['title_other'] = implode(" ", $parts);
             $topLinkArray[] = $item;
         }
