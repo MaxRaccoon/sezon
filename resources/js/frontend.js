@@ -99,6 +99,9 @@ function selectProgram(index) {
     }
 
     var height = $("#programs .program-info > div[data-program-index='" + index + "']").height() + 150;
+    if (height < 800) {
+        height = 800;
+    }
     $("#programs .menu-list").height(height);
     scrollToAnchor("programs");
 }
