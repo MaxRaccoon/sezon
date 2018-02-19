@@ -430,6 +430,7 @@ h3.title {
 .programs-list .menu-list {
   background-color: #FED944;
   padding: 0;
+  overflow-y: scroll;
 }
 .programs-list .menu-list > div {
   color: #47201A;
@@ -446,6 +447,7 @@ h3.title {
 .programs-list .program-info {
   padding: 70px 120px;
   font-size: 1.2em;
+  min-height: 800px;
 }
 .programs-list .program-info h4 {
   color: #8b8b8b;
@@ -458,6 +460,7 @@ h3.title {
   position: absolute;
   right: 0;
   margin-right: -200px;
+  padding-top: 40px;
 }
 .programs-list .program-info .photo img {
   width: 150px;

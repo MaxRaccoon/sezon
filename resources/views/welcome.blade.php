@@ -173,8 +173,8 @@
                 <div class="photo" id="program-photo-{{ $program['id'] }}"
                     data-gallery-init="0">
                     @foreach($program['photo'] as $photo)
-                        <a href="#">
-                            <img alt="Фото №{{ $photo['id'] }}"
+                        <a href="#" title="{{ $program['title'] }}: фото №{{ $loop->iteration }}">
+                            <img alt="{{ $program['title'] }}: фото №{{ $loop->iteration }}"
                                  src="{{ $photo['photo_thumb_link'] }}"
                                  data-image="{{ $photo['photo_link'] }}"
                                  style="display:none">
