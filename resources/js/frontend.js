@@ -98,7 +98,7 @@ function selectProgram(index) {
             .data("gallery-init", 1);
     }
 
-    menuAutoHeight();
+    menuAutoHeight($("#programs .program-info > div[data-program-index='" + index + "']").height());
 }
 /**
  * Информация о тренере
@@ -108,21 +108,21 @@ function selectTrainer(index) {
     $("#programs .program-info > div").not("[data-trainer-index='" + index + "']").hide();
     $("#programs .program-info > div[data-trainer-index='" + index + "']").show();
     scrollToAnchor("programs");
-    menuAutoHeight();
+    menuAutoHeight($("#programs .program-info > div[data-trainer-index='" + index + "']").height());
 }
 
 function showSchedule() {
     $("#programs .program-info > div").not("[data-schedule-index='0']").hide();
     $("#programs .program-info > div[data-schedule-index='0']").show();
     scrollToAnchor("programs");
-    menuAutoHeight();
+    menuAutoHeight($("#programs .program-info > div[data-schedule-index='0']").height());
 }
 function scrollToAnchor(id){
     var tag = $("#" + id);
     $('html,body').animate({scrollTop: tag.offset().top},'slow');
 }
-function menuAutoHeight() {
-    var height = $("#programs .program-info > div[data-program-index='" + index + "']").height() + 150;
+function menuAutoHeight(height) {
+    var height = height + 150;
     if (height < 800) {
         height = 800;
     }
