@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <header>
+    <header class="">
         <div class="slider">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -81,7 +81,7 @@
         <h1 class="text-center">{{ strip_tags($keys['H1']) }}</h1>
     </div>
 
-    <div class="programs row">
+    <div class="programs row d-none d-xl-flex">
         @foreach($topLink as $item)
         <div class="col-md-4 image">
             <img src="{{ $item['image'] }}" />
@@ -97,7 +97,7 @@
         @endforeach
     </div>
 
-    <div class="gallery-block">
+    <div class="gallery-block d-none d-lg-block">
         <div id="gallery" style="display:none;">
 
             @foreach ($images as $image)
@@ -158,7 +158,7 @@
     </div>
 
     <div class="programs-list row" id="programs">
-        <div class="menu-list col-md-3">
+        <div class="menu-list col-md-3 d-none d-lg-block">
             @foreach($programs as $program)
             <div data-program-link="{{ $program['id'] }}"
                  @if ($loop->first)
@@ -170,7 +170,7 @@
         <div class="program-info col-md-7">
             @foreach($programs as $program)
             <div data-program-index="{{ $program['id'] }}">
-                <div class="photo" id="program-photo-{{ $program['id'] }}"
+                <div class="photo d-none d-lg-block" id="program-photo-{{ $program['id'] }}"
                     data-gallery-init="0">
                     @foreach($program['photo'] as $photo)
                         <a href="#" title="{{ $program['title'] }}: фото №{{ $loop->iteration }}">
@@ -233,6 +233,22 @@
                 @endforeach
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="gallery-block d-md-none">
+        <div id="gallery-m" style="display:none;">
+
+            @foreach ($images as $image)
+                <a href="#">
+                    <img alt="{{ $image['title'] }}"
+                         src="{{ $image['image_thumb_link'] }}"
+                         data-image="{{ $image['image_link'] }}"
+                         data-description="{{ $image['description'] }}"
+                         style="display:none">
+                </a>
+            @endforeach
+
         </div>
     </div>
 
