@@ -13,12 +13,15 @@ $(document).ready(function () {
 
     selectProgram();
     $("[data-program-link]").click(function () {
+        scrollToAnchor("programs");
         selectProgram($(this).data("program-link"));
     });
     $("[data-trainer-link]").click(function () {
+        scrollToAnchor("programs");
         selectTrainer($(this).data("trainer-link"));
     });
     $("[data-schedule-link]").click(function () {
+        scrollToAnchor("programs");
         showSchedule();
     });
 });
@@ -127,5 +130,4 @@ function menuAutoHeight(height) {
         height = 800;
     }
     $("#programs .menu-list").height(height);
-    scrollToAnchor("programs");
 }
