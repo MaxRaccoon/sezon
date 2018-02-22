@@ -9,25 +9,43 @@
 @endsection
 
 @section('body')
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Спорт клуб "СЕЗОН"</a>
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <a class="navbar-brand" href="/">Спорт клуб "СЕЗОН"</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 @foreach ($menu as $item)
+                    @if ($item['url'] == "#programs")
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="programDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            {{ $item['title'] }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="programDropdown">
+                            @foreach($programs as $program)
+                                <a class="dropdown-item" href="{{ $item['url'] }}"
+                                   data-program-link="{{ $program['id'] }}"
+                                >{{ $program['title'] }}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                    @else
                     <li class="nav-item
                         @if ($loop->first)
                             active
                         @endif">
-                        <a class="nav-link" href="#{{ $item['url'] }}">
+                        <a class="nav-link" href="{{ $item['url'] }}">
                             {{ $item['title'] }}
                             @if ($loop->first)
                                 <span class="sr-only">(current)</span>
                             @endif
                         </a>
                     </li>
+                    @endif
                 @endforeach
             </ul>
             <span class="navbar-text">
