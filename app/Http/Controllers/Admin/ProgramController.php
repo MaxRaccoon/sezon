@@ -99,8 +99,10 @@ class ProgramController extends Controller
      * @return bool
      */
     public function destroy(Request $request, $id) {
-        if ($user = Program::find($id)) {
-            $user->delete();
+        if ($program = Program::find($id)) {
+            $program->updated_at = new \DateTime();
+            $program->deleted = 1;
+            $program->save();
         }
         return response()->json(['success'=>'true']);
     }
