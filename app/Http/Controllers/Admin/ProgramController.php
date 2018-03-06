@@ -85,6 +85,7 @@ class ProgramController extends Controller
         $program->title = $request->input('title');
         $program->description = $request->input('description');
         $program->duration = $request->input('duration');
+        $program->is_training = $request->input('is_training', 0);
 
         $program->updated_at = new \DateTime();
 

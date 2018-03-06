@@ -1,4 +1,4 @@
-var app = angular.module('dev4UManagement', ['ngPassword', 'ngFileUpload', 'textAngular'],
+var app = angular.module('dev4UManagement', ['ngPassword', 'ngFileUpload', 'textAngular', 'datePicker'],
                 // по дефолту ангуляр конфликтует с blade, из-за общих тегов {{ }}
                 // меняем теги на <% и %>
                 function($interpolateProvider) {
@@ -46,6 +46,7 @@ app.factory('dev4UService', function($http, API_URL) {
                         method: 'GET',
                         url: API_URL + entity + '/' + id
                     }).then(function (response){
+                        console.log(response.data);
                         angular.element('[ng-controller=' + controllerName + ']').scope()[entity] = response.data;
                     },function (error){
                         console.log(error);

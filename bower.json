@@ -22,6 +22,7 @@
     "textAngular": "~1.5",
     "jquery-mask-plugin": "~1.14",
     "angular-password": "~1.0.3",
+    "angular-datepicker": "~1.0.5",
     "bootstrap-4": "bootstrap#v4-dev",
     "bootstrap-3": "bootstrap#3.3.7",
     "popper.js": "^1.12.9",

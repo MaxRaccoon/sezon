@@ -211,12 +211,19 @@ h3.title {
   padding: 50px 0;
 }
 .trainers > div {
-  width: 20%;
+  width: 50%;
   float: left;
   text-align: center;
   height: 300px;
   padding: 0 10px;
   cursor: pointer;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .trainers > div {
+    width: 20%;
+    margin-bottom: 10px;
+  }
 }
 .trainers > div .img {
   height: 250px;
@@ -445,9 +452,14 @@ h3.title {
   cursor: default;
 }
 .programs-list .program-info {
-  padding: 70px 120px;
+  padding: 10px 30px;
   font-size: 1.2em;
   min-height: 800px;
+}
+@media (min-width: 768px) {
+  .programs-list .program-info {
+    padding: 70px 120px;
+  }
 }
 .programs-list .program-info h4 {
   color: #8b8b8b;
@@ -488,9 +500,11 @@ h3.title {
   display: inline-block;
   margin-bottom: 10px;
 }
+.programs-list .program-info .info .program[data-training='1'] {
+  border: 1px solid #47201A;
+}
 .pricing {
   width: 100%;
-  height: 350px;
   background: url(/images/bg-2.png) no-repeat center center fixed;
   background-size: cover;
   color: #fff;
@@ -561,7 +575,26 @@ ul.blocked li .number {
 }
 .schedule-table .info .day {
   border: 1px solid #47201A !important;
+  background: #47201A !important;
   color: #FED944 !important;
+}
+.navbar {
+  background-color: #47201A;
+  color: #FED944;
+}
+.navbar a,
+.navbar a:hover {
+  color: #FED944;
+}
+.navbar a.navbar-brand,
+.navbar a:hover.navbar-brand {
+  font-weight: bold;
+}
+.navbar .navbar-nav {
+  font-size: 1.2em;
+}
+.navbar .dropdown-menu {
+  background-color: #47201A;
 }
 
 /*# sourceMappingURL=style.css.map */

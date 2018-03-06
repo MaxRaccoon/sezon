@@ -20,7 +20,7 @@ class Program extends Model
      * @var array
      */
     protected $fillable = [
-        'trainer_id ', 'title', 'description', 'duration'
+        'trainer_id ', 'title', 'description', 'duration', 'is_training'
     ];
 
     /**

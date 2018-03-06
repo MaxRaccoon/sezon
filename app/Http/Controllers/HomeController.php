@@ -12,6 +12,7 @@ use App\Gallery;
 use App\Program;
 use App\ProgramPhoto;
 use App\ProgramSchedule;
+use App\News;
 use App\Request AS RequestEntity;
 use Mail;
 use Monolog\Handler\GelfHandler;
@@ -78,7 +79,8 @@ class HomeController extends Controller
             $item['trainer'] = $trainerArray[$item['trainer_id']];
             $trainerArray[$item['trainer_id']]['programs'][] = [
                 'id' =>  $item['id'],
-                'title' => $item['title']
+                'title' => $item['title'],
+                'is_training' => $item['is_training']
             ];
             $item['schedule'] = ProgramSchedule::where('program_id', $item['id'])
                 ->orderBy('day_of_weak', 'asc')
@@ -114,6 +116,12 @@ class HomeController extends Controller
                 ];
         }
 
+        $news = News::where('deleted', 0)
+            ->orderBy('published_dt', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->limit(5)
+            ->get();
+
         return view('welcome', [
             'keys' => $keyArray,
             'menu' => $menuArray,
@@ -123,7 +131,8 @@ class HomeController extends Controller
             'images' => $images,
             'programs' => $programArray,
             'days' => $days,
-            'schedule' => $schedule
+            'schedule' => $schedule,
+            'news' => $news
         ]);
     }
 

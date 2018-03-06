@@ -11,6 +11,15 @@
         </div>
     </div>
 
+    <div class="form-group error">
+        <label for="is_training" class="col-sm-3 control-label">Это тренировка?</label>
+        <div class="col-sm-9">
+            <input type="checkbox" ng-model="program.is_training"
+                   ng-checked="program.is_training"
+                   ng-true-value="1" ng-false-value="0" />
+        </div>
+    </div>
+
     <script>
         var trainerList = [];
         @foreach ($trainers as $trainer)

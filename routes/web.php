@@ -56,15 +56,20 @@ Route::middleware(['auth'])->group(function () {
             Route::get('menu/{id}', 'MenuController@getOne')->where('id', '[0-9]+');
             Route::delete('menu/{id}', 'MenuController@destroy')->where('id', '[0-9]+');
 
-            //Technology
-            Route::prefix('technologies')->group(function () {
-                Route::get('', 'TechnologyController@index');
-                Route::get('list', 'TechnologyController@getList');
+            //News
+            Route::prefix('news')->group(function () {
+                Route::get('', 'NewsController@index');
+                Route::get('list', 'NewsController@getList');
             });
-            Route::post('technology/{id}', 'TechnologyController@save')->where('id', '[0-9]+');
-            Route::post('technology', 'TechnologyController@save');
-            Route::get('technology/{id}', 'TechnologyController@getOne')->where('id', '[0-9]+');
-            Route::delete('technology/{id}', 'TechnologyController@destroy')->where('id', '[0-9]+');
+            Route::post('news/{id}', 'NewsController@save')->where('id', '[0-9]+');
+            Route::post('news', 'NewsController@save');
+            Route::get('news/{id}', 'NewsController@getOne')->where('id', '[0-9]+');
+            Route::delete('news/{id}', 'NewsController@destroy')->where('id', '[0-9]+');
+
+            Route::get('newsPhotos/{id}', 'NewsController@newsPhotoIndex')->where('id', '[0-9]+');
+            Route::get('newsPhoto/list/{id}', 'NewsController@newsPhotoList')->where('id', '[0-9]+');
+            Route::post('newsPhoto', 'NewsController@newsPhotoSave');
+            Route::delete('newsPhoto/{id}', 'NewsController@newsPhotoDestroy')->where('id', '[0-9]+');
 
             //program
             Route::prefix('programs')->group(function () {

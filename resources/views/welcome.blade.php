@@ -27,6 +27,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="programDropdown">
                             @foreach($programs as $program)
+                                @if ($program['is_training'])
+                                    @continue
+                                @endif
                                 <a class="dropdown-item" href="{{ $item['url'] }}"
                                    data-program-link="{{ $program['id'] }}"
                                 >{{ $program['title'] }}</a>
@@ -178,6 +181,9 @@
     <div class="programs-list row" id="programs">
         <div class="menu-list col-md-3 d-none d-lg-block">
             @foreach($programs as $program)
+                @if ($program['is_training'])
+                    @continue
+                @endif
             <div data-program-link="{{ $program['id'] }}"
                  @if ($loop->first)
                  class="active"
@@ -229,7 +235,8 @@
                 {!! $trainer['description'] !!}
                 <div class="info">
                     @foreach($trainer['programs'] as $program)
-                        <div class="program" data-program-link="{{ $program['id'] }}">
+                        <div class="program" data-program-link="{{ $program['id'] }}"
+                            data-training="{{ $program['is_training'] }}">
                             {{ $program['title'] }}
                         </div>
                     @endforeach
@@ -274,34 +281,68 @@
         <div class="col-md-6 info">
             <div class="row">
                 <div class="col-md-3">
-                    <strong class="company-name">СЕЗОН &copy; 2017</strong>
+                    <strong class="company-name">СЕЗОН &copy; {{ date('Y') }}</strong>
                 </div>
                 <div class="col-md-4">
-                    <strong>Спортивный клуб "Сезон"</strong>
-                    <br /><br />
-                    <p class="gray">Иркутск, ул. Свердлова, 36, ТЦ «Сезон», 3 этаж</p>
+                    <strong>{!! $keys['MetaDescrition'] !!}</strong>
+                    <br />
+                    <p class="gray">{!! $keys['ContactAddress'] !!}</p>
+                    <br />
                     <strong>Режим работы:</strong>
                     <p class="gray">
-                        Понедельник - Суббота, с 8:00 до 21:00
+                       {!! $keys['Schedule'] !!}
                     </p>
-                    <h4><i class="fa fa-phone" aria-hidden="true"></i> 73-50-00</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i> {{ strip_tags($keys['ContactPhone']) }}</h4>
                 </div>
                 <div class="col-md-5">
                     <strong>Новости</strong>
-                    <br /><br />
-                    <strong class="gray">В ТЦ «Сезон» открылся спортивный клуб</strong>
-                    <br />
-                    <i>09 сентября, 2016</i>
-                    <br /><br />
-                    <strong class="gray">Открытие спортивного клуба «Сезон»</strong>
-                    <br />
-                    <i>01 декабря, 2016</i>
-                    <br /><br />
+
+                    @foreach ($news as $one)
+                        <br /><br />
+                        <a href="#" onclick="showNews({{ $one->id }})">
+                            <strong class="gray">{{ $one->title }}</strong>
+                        </a>
+                        <div data-news-content="{{ $one->id }}"
+                             data-title="{{ $one->title }}" class="hide">
+                            {!! $one->content !!}
+                            <div class="photo" id="news-photo-{{ $one->id }}"
+                                 data-gallery-init="0">
+                                @foreach($one->photo()->where('deleted', 0)->get() as $image)
+                                    <a href="#" title="{{ $one->title }}: фото №{{ $loop->iteration }}">
+                                        <img alt="{{ $one->title }}: фото №{{ $loop->iteration }}"
+                                             src="{{ $image->photo_thumb_link }}"
+                                             data-image="{{ $image->photo_link  }}"
+                                             style="display:none">
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
+                        <br />
+                        <i>{{ $one->getPublishDate()->format("d.m.Y") }}</i>
+                    @endforeach
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div id="yMap"></div>
+        </div>
+    </div>
+
+    <div class="modal bd-example-modal-lg" tabindex="-1" role="dialog" id="newsModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-gray" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -13,6 +13,7 @@
                 <th>Заголовок</th>
                 <th>Тренер</th>
                 <th>Длительность</th>
+                <th>Тренировка?</th>
                 <th>
                     <button id="btn-add" class="btn btn-primary btn-xs"
                             ng-click="toggle('add', 0)">
@@ -28,6 +29,7 @@
                 <td><% program.title %></td>
                 <td><% program.trainer.name %></td>
                 <td><% program.duration %></td>
+                <td><% program.is_training %></td>
                 <td>
                     <button class="btn btn-default btn-xs btn-detail" ng-click="toggle('edit', program.id)">
                         <i class="fa fa-pencil" aria-hidden="true"></i>

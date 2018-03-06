@@ -247,6 +247,9 @@
                         <li {{ (Request::is('admin/landings') ? 'class="active"' : '') }}>
                             <a href="{{ url ('admin/landings') }}"><i class="fa fa-database" aria-hidden="true"></i> Лэндинг данные</a>
                         </li>
+                        <li {{ (Request::is('admin/news') ? 'class="active"' : '') }}>
+                            <a href="{{ url ('admin/news') }}"><i class="fa fa-database" aria-hidden="true"></i> Новости</a>
+                        </li>
                         <li {{ (Request::is('admin/menus') ? 'class="active"' : '') }}>
                             <a href="{{ url ('admin/menus') }}"><i class="fa fa-bars" aria-hidden="true"></i> Меню</a>
                         </li>

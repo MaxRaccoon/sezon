@@ -131,3 +131,34 @@ function menuAutoHeight(height) {
     }
     $("#programs .menu-list").height(height);
 }
+
+function showNews(index) {
+    var content = $("div[data-news-content='" + index + "']").html();
+    if (content) {
+        var title = $("div[data-news-content='" + index + "']").data("title");
+        $("#newsModal .modal-title").text(title);
+        $("#newsModal .modal-body").html(content);
+        $("#newsModal").modal("toggle");
+
+        if ($("#newsModal .photo a").length) {
+            var uniq_id = generateUUID();
+            $("#newsModal .photo").attr("id", uniq_id);
+            console.log("#" + uniq_id);
+            $("#" + uniq_id).unitegallery({
+                tiles_type:"justified"
+            });
+        }
+    }
+}
+
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();
+    if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+        d += performance.now(); //use high-precision timer if available
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}

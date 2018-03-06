@@ -20,6 +20,7 @@ elixir(function(mix) {
         'bower_components/bootstrap-3/dist/css/bootstrap.css',
         'bower_components/fontawesome/css/font-awesome.css',
         'bower_components/textAngular/dist/textAngular.css',
+        'bower_components/angular-datepicker/dist/angular-datepicker.css',
         'resources/css/sb-admin-2.css',
         'resources/css/timeline.css'
     ], 'public/assets/stylesheets/management.css', './');
@@ -59,6 +60,7 @@ elixir(function(mix) {
         'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
         'bower_components/angular/angular.min.js',
         'bower_components/angular-password/angular-password.min.js',
+        'bower_components/angular-datepicker/dist/angular-datepicker.js',
         'bower_components/ng-file-upload/ng-file-upload.min.js',
         // 'bower_components/Chart.js/Chart.js',
         'bower_components/metisMenu/dist/metisMenu.js',
@@ -67,6 +69,7 @@ elixir(function(mix) {
         'bower_components/textAngular/dist/textAngular.min.js',
         'resources/js/sb-admin-2.js',
         'resources/js/app/admin.js',
+        'resources/js/app/angular-locale_ru-ru.js',
         'resources/js/app/controllers/*.js'
     ], 'public/assets/scripts/management.js', './');
 });
