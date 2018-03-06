@@ -16,8 +16,6 @@
         <label for="is_action" class="col-sm-3 control-label">Акция?</label>
         <div class="col-sm-9">
             <input type="checkbox" ng-model="news.is_action"
-                   ng-true-value="'1'" ng-false-value="'0'">
-            <input type="checkbox" ng-model="news.is_action"
                    ng-checked="news.is_action"
                    ng-true-value="1" ng-false-value="0" />
         </div>
