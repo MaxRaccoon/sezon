@@ -73,7 +73,7 @@ class HomeController extends Controller
         }
         unset($collection);
 
-        $collection = Program::orderBy('id', 'asc')->get();
+        $collection = Program::orderBy('id', 'asc')->orderBy('is_training', 'asc')->get();
         $programArray = [];
         foreach ($collection->toArray() AS $item) {
             $item['trainer'] = $trainerArray[$item['trainer_id']];
