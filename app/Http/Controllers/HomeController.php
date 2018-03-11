@@ -73,8 +73,11 @@ class HomeController extends Controller
         }
         unset($collection);
 
-        $collection = Program::orderBy('is_training', 'asc')->orderBy('title', 'asc')->get();
+        $collection = Program::orderBy('is_training', 'asc')
+            ->orderBy('trainer_id', 'asc')
+            ->orderBy('title', 'asc')->get();
         $programArray = [];
+        $trainingGroup = [];
         foreach ($collection->toArray() AS $item) {
             $item['trainer'] = $trainerArray[$item['trainer_id']];
             $trainerArray[$item['trainer_id']]['programs'][] = [
@@ -87,8 +90,32 @@ class HomeController extends Controller
                 ->orderBy('start_time', 'asc')->get();
             $programArray[$item['id']] = $item;
             $programArray[$item['id']]['photo'] = [];
+
+            if ($item['is_training']) {
+                $hash = md5(strtolower($item['title']));
+                if (!isset($trainingGroup[$hash])) {
+                    $trainingGroup[$hash] = [];
+                }
+
+                $trainingGroup[$hash][] = [
+                    'id' => $item['trainer_id'],
+                    'name' => $trainerArray[$item['trainer_id']]['name'],
+                    'last_name' => $trainerArray[$item['trainer_id']]['last_name']
+                ];
+            }
         }
         unset($collection);
+
+        // В последний момент попросили разделить программы
+        // на тренировки и нет =( выкручиваюсь
+        foreach ($programArray AS &$program) {
+            if ($program['is_training']) {
+                $hash = md5(strtolower($program['title']));
+                if (isset($trainingGroup[$hash])) {
+                    $program['trainers'] = $trainingGroup[$hash];
+                }
+            }
+        }
 
         $collection = ProgramPhoto::orderBy('id', 'asc')->get();
         foreach ($collection->toArray() AS $item) {

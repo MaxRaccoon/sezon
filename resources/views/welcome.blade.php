@@ -213,10 +213,19 @@
                 <div class="clearfix"></div>
                 <br />
                 <div class="info">
+                    @if($program['is_training'])
+                        @foreach($program['trainers'] as $trainer)
+                            <div class="trainer" data-trainer-link="{{ $trainer['id'] }}">
+                                <span class="orange">{{ $trainer['name'] }}</span>
+                                {{ $trainer['last_name'] }}
+                            </div>
+                        @endforeach
+                    @else
                     <div class="trainer" data-trainer-link="{{ $program['trainer']['id'] }}">
                         <span class="orange">{{ $program['trainer']['name'] }}</span>
                         {{ $program['trainer']['last_name'] }}
                     </div>
+                    @endif
                     @foreach($program['schedule'] as $day)
                     <div class="day" data-schedule-link="{{ $days[ $day['day_of_weak'] ] }}">
                         {{ $days[ $day['day_of_weak'] ] }}
@@ -282,6 +291,14 @@
             <div class="row">
                 <div class="col-md-3">
                     <strong class="company-name">СЕЗОН &copy; {{ date('Y') }}</strong>
+                    <div class="social">
+                        <a href="{{ $keys['InstagramLink'] }}"
+                           target="_blank"><i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="{{ $keys['VkLink'] }}"
+                           target="_blank"><i class="fa fa-vk"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <strong>{!! $keys['MetaDescrition'] !!}</strong>
