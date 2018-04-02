@@ -21,13 +21,15 @@
 
     <script src="{{ asset("assets/scripts/frontend.js") }}" type="text/javascript"></script>
 
-    @if (isset($keys['GoogleAnalytics']))
-        {!! $keys['GoogleAnalytics'] !!}
-    @endif
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116764226-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    @if (isset($keys['YandexMetrika']))
-        {!! $keys['YandexMetrika'] !!}
-    @endif
+        gtag('config', 'UA-116764226-1');
+    </script>
 
 </body>
 </html>
